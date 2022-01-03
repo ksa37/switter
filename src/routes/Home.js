@@ -20,9 +20,9 @@ export default function Home({userObj}){
     },[]); 
 
     return(
-        <div>
+        <div className="container">
             <CreateSweet userObj={userObj}/>
-            <div>
+            <div style={{ marginTop: 30 }}>
                 {sweets.map((swt)=>{ 
                     return(
                     <Sweet key={swt.id} swtObj={swt} isOwner={swt.createId===userObj.uid}/>
