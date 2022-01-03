@@ -7,14 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Navigation({userObj}){
     return(
         <nav>
-            <ul style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
+            <ul style={{ display: "flex", justifyContent: "center" }}>
                 <li>
                     <Link to="/" style={{ marginRight: 10 }}>
                         <FontAwesomeIcon icon={faTwitter} color={"#04AAFF"} size="2x" />
                     </Link>
                 </li>
                 <li>
-                    {/* <Link to="/profile">{userObj.displayName}의 Profile</Link> */}
                     <Link
                         to="/profile"
                         style={{

@@ -32,7 +32,7 @@ function App() {
   return (
     <>
     {init? <AppRouter isLoggedIn={Boolean(userObj)} userObj={userObj} refreshUser={refreshUser}/> :"Initializing..."}
-    <footer>&copy; {new Date().getFullYear()} Switter</footer>
+    <footer> <div className="footerDiv"> &copy; {new Date().getFullYear()} Switter </div></footer>
     </>
   )
 }

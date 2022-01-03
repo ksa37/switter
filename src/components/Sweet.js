@@ -4,7 +4,7 @@ import { deleteObject, ref } from "firebase/storage";
 import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
  import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
- 
+
 export default function Sweet({swtObj, isOwner}){
     const [editing, setEditing] = useState(false);
     const [newSweet, setNewSweet] = useState(swtObj.text);
@@ -42,7 +42,7 @@ export default function Sweet({swtObj, isOwner}){
                         required
                         onChange={onChange}
                         />
-                        <input type="submit" value="Update Sweet" lassName="formBtn" />
+                        <input type="submit" value="Update Sweet" className="formBtn" />
                     </form>
                     <button onClick={toggleEditing} className="formBtn cancelBtn">Cancel</button>
                 </>

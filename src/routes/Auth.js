@@ -30,9 +30,13 @@ export default function Auth(){
                 style={{ marginBottom: 30 }}
             />
             <AuthForm/>
-            <div>
-                <button name="googleBtn" onClick={onSocialClick} className="authBtn">Continue with Google<FontAwesomeIcon icon={faGoogle} /></button>
-                <button name="githubBtn" onClick={onSocialClick} className="authBtn">Continue with Github<FontAwesomeIcon icon={faGithub} /></button>
+            <div className="authBtns">
+                <button name="googleBtn" onClick={onSocialClick} className="authBtn">
+                    Continue with Google <FontAwesomeIcon icon={faGoogle} />
+                </button>
+                <button name="githubBtn" onClick={onSocialClick} className="authBtn">
+                    Continue with Github <FontAwesomeIcon icon={faGithub} />
+                </button>
             </div>
         </div>
     )
