@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/switter/static/css/main.557f87f3.css",
+    "main.css": "/switter/static/css/main.f0163f39.css",
     "main.js": "/switter/static/js/main.7deced68.js",
     "index.html": "/switter/index.html",
-    "main.557f87f3.css.map": "/switter/static/css/main.557f87f3.css.map",
+    "main.f0163f39.css.map": "/switter/static/css/main.f0163f39.css.map",
     "main.7deced68.js.map": "/switter/static/js/main.7deced68.js.map"
   },
   "entrypoints": [
-    "static/css/main.557f87f3.css",
+    "static/css/main.f0163f39.css",
     "static/js/main.7deced68.js"
   ]
 }
