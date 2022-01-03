@@ -1,5 +1,6 @@
-import { dbService } from "fbase";
+import { dbService, storageService } from "fbase";
 import { deleteDoc, doc, updateDoc } from "firebase/firestore";
+import { deleteObject, ref } from "firebase/storage";
 import React, {useState} from "react";
 
 export default function Sweet({swtObj, isOwner}){
@@ -11,6 +12,9 @@ export default function Sweet({swtObj, isOwner}){
         if(ok){
             const docToDelete = doc(dbService, "sweets", `${swtObj.id}`);
             await deleteDoc(docToDelete);
+            const deleteRef = ref(storageService, swtObj.attachmentUrl);
+            await deleteObject(deleteRef);
+            
         }
     }
     const toggleEditing = () => setEditing((prev) => !prev);
@@ -42,6 +46,7 @@ export default function Sweet({swtObj, isOwner}){
                 </>
                 : <>
                     <h4> {swtObj.text} </h4>
+                    {swtObj.attachmentUrl && <img src={swtObj.attachmentUrl} width={50} height={50}/>}
                     {isOwner &&
                         <>
                             <button onClick={onDeleteClick}>Delete</button>
